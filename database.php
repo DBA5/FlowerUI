@@ -11,7 +11,7 @@ public function getFlowers(){
 	$this->getConnection();
 	$sql = "SELECT * FROM FLOWERS ORDER BY comname";
 	$results = $this->conn-query($sql);
-	$result array - array();
+	$result_array - array();
 	foreach($results as $row){ 
 		$cur_row = array();
 		$cur_row['comname']=$row['COMNAME'];
@@ -29,7 +29,9 @@ public function getSightings($flower){
     if($stmt === False){
         return null;
     }
-    $results = $stmt->execute(array(':flower'=>$flower));
+    $stmt->execute(array(':flower'->$flower));
+	$results = $stmt->fetchAll();
+	$result_array = array();
     foreach($results as $row){
         $cur_row = array();
         $cur_row['name'] = $row['NAME'];

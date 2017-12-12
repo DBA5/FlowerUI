@@ -39,12 +39,24 @@ require 'database.php';
 <hr>
 <h2>Sightings for <?- $flower?></h2>
 <table class= "table table-striped">
-	<Lr>
+	<tr>
 		<th>Name</th>
 		<th>Person</th>
 		<th>Location</th>
 		<th>Sighted</th>
-	</Lr>
+	</tr>
+	<?php
+		foreach($sightings as $s):
+	?>
+		<tr>
+			<td><?=$s['name']?></td>
+			<td><?=$s['person']?></td>
+			<td><?=$s['location']?></td>
+			<td><?=$s['sighted']?></td>
+		</tr>
+	<?php
+		endforeach;
+	?>
 </table>
 </div><!-- /.container -->
 
