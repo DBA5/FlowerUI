@@ -10,8 +10,8 @@ class Database{
 public function getFlowers(){
 	$this->getConnection();
 	$sql = "SELECT * FROM FLOWERS ORDER BY comname";
-	$results = $this->conn-query($sql);
-	$result_array - array();
+	$results = $this->conn->query($sql);
+	$result_array = array();
 	foreach($results as $row){ 
 		$cur_row = array();
 		$cur_row['comname']=$row['COMNAME'];
@@ -29,7 +29,7 @@ public function getSightings($flower){
     if($stmt === False){
         return null;
     }
-    $stmt->execute(array(':flower'->$flower));
+    $stmt->execute(array(':flower'=>$flower));
 	$results = $stmt->fetchAll();
 	$result_array = array();
     foreach($results as $row){
