@@ -6,7 +6,7 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 
-		<title>CIS4301 Flower A5</title>
+		<title>CIS4301 A5</title>
 		// ?????? 
 		<!
 		<![endif]-->

@@ -86,3 +86,5 @@ else:
 		endif;
 	?>
 	</div><!-- /.container -->
+
+	<?php require 'footer.php' ?>
