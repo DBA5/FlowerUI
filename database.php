@@ -46,7 +46,7 @@ public function updateFlower($flower, $genus, $species, $comname){
 	$this->getConnection();
 	$sql = "UPDATE FLOWERS SET COMNAME = :comname, GENUS = :genus, SPECIES = :species WHERE COMNAME = :flower";
 	$stmt = $this->conn->prepare($sql);
-	if($stmt ===False) return False;
+	if($stmt === False) return False;
 	return $stmt->execute(array(':comname'=>$comname, ':genus'=>$genus, ':species'=>$species, ':flower'=>$flower));
 	
 }

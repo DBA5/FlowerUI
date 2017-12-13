@@ -2,8 +2,15 @@
 require 'database.php';
  
  $db = new Database(); 
+ $flowers = $db->getFlowers();
  $message = null;
  if(isset($_GET) && isset($_GET['flower'])){
+ if($_GET['flower']== -1){
+        $message = "Please select a flower.";
+     }else{
+         $reqs_flower = $_GET['flower'];
+         $flower = $flowers[$reqs_flower];
+     }
      
 	 if(isset($_POST) && isset($_POST['editflower'])){
 			$reqs_flower = $_POST['editflower'];
@@ -17,16 +24,8 @@ require 'database.php';
 				$message = $reqs_flower."Not updated.";
 			}
 	 }
-	 $flowers = $db->getFlowers();
-	 if($_GET['flower']== -1){
-        $message = "Please select a flower.";
-     }else{
-         $reqs_flower = $_GET['flower'];
-         $flower = $flowers[$reqs_flower];
-     }
- }else{
- 	 $flowers = $db->getFlowers();
- }
+	 }
+
 
 ?>
 
@@ -78,7 +77,7 @@ else:
 		<input type="text" class="form-control" id="comname" name="comname" value="<?=$flower['comname']?>">
 	</div>
 	</div>
-	<input name="editflower" value="<?=$flower['genus']?>" type="hidden">
+	<input name="editflower" value="<?=$flower['comname']?>" type="hidden">
 	<button type="submit" class="btn btn-default">Submit</button>
 	</form>
 	<?php
