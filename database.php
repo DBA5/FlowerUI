@@ -47,7 +47,7 @@ public function updateFlower($flower, $genus, $species, $comname){
 	$sql = "UPDATE FLOWERS SET COMNAME = :comname, GENUS = :genus, SPECIES = :species WHERE COMNAME = :flower";
 	$stmt = $this->conn->prepare($sql);
 	if($stmt ===False) return False;
-	$stmt->execute(array(':comname'=>$comname, ':genus'=>$genus, ':species'=>$species, ':flower'=>$flower));
+	return $stmt->execute(array(':comname'=>$comname, ':genus'=>$genus, ':species'=>$species, ':flower'=>$flower));
 	
 }
 public function addSighting($flower, $person, $location, $sighted){
