@@ -9,12 +9,12 @@
 
 
 		<title>CIS4301 A5</title>
-		
+
 	</head>
 
 	<body>
 
-	<nav class="navbar navbar-inverse">
+	<nav class="navbar">
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -23,13 +23,17 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">CIS 4301 A5</a>
-				</div>
+				<a class="navbar-brand" href="#">CIS 4301</a>
 				<div id="navbar" class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
 						<li><a href="index.php">Query</a></li>
 						<li><a href="update.php">Update</a></li>
-
+						<li>Insert</li>
 					</ul>
-				</div><!--/.nav-collapse -->
+				</div>
+				<!--/.nav-collapse -->
 			</div>
+		</div>
+
+	</nav>
+	</body>
