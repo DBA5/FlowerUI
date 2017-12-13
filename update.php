@@ -1,4 +1,4 @@
-<?php require 'header.php'
+<?php require 'header.php';
 require 'database.php';
  
  $db = new Database(); 
@@ -9,8 +9,8 @@ require 'database.php';
 	 if(isset($_POST) && isset($_POST['editflower'])){
 			$reqs_flower = $_POST['editflower'];
 			$genus = $_POST['genus'];
-			species = $_POST['species'];
-			comname = $_POST['comname'];
+			$species = $_POST['species'];
+			$comname = $_POST['comname'];
 			$r = $db->updateFlower($reqs_flower, $genus, $species, $comname);
 			if($r){
 				$message = $reqs_flower ."Updated!";
