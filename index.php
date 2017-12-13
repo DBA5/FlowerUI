@@ -63,4 +63,3 @@ require 'database.php';
 <?php endif; ?>
 </div><!-- /.container -->
 
-<?php require 'footer.php' ?>
