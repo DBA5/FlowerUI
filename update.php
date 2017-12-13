@@ -2,7 +2,6 @@
 require 'database.php';
  
  $db = new Database(); 
- $flowers = $db->getFlowers();
  $message = null;
  if(isset($_GET) && isset($_GET['flower'])){
      
