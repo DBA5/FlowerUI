@@ -64,22 +64,22 @@ else:
 <div class="form-group">
 	<label for="genus" class="col-sm-2 control-label">Genus</label>
 	<div class="col-sm-10">
-		<input type="text" class="form-control" id="genus" name="genus" value="<?-$flower['genus']?>">
+		<input type="text" class="form-control" id="genus" name="genus" value="<?=$flower['genus']?>">
 	</div>
 	</div>
 	<div class="form-group">
 	<label for="species" class="col-sm-2 control-label">Species</label>
 	<div class="col-sm-10">
-		<input type="text" class="form-control" id="species" name="species" value="<?-$flower['species']?>">
+		<input type="text" class="form-control" id="species" name="species" value="<?=$flower['species']?>">
 	</div>
 	</div>
 	<div class="form-group">
 	<label for="comname" class="col-sm-2 control-label">Common Name</label>
 	<div class="col-sm-10">
-		<input type="text" class="form-control" id="comname" name="comname" value="<?-$flower['comname']?>">
+		<input type="text" class="form-control" id="comname" name="comname" value="<?=$flower['comname']?>">
 	</div>
 	</div>
-	<input name="editflower" value="<?-$flower['genus']?>" type="hidden">
+	<input name="editflower" value="<?=$flower['genus']?>" type="hidden">
 	<button type="submit" class="btn btn-default">Submit</button>
 	</form>
 	<?php
