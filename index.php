@@ -39,7 +39,7 @@ require 'database.php';
 </form>
 <hr>
 <?php if(isset($sightings)): ?>
-<h2>Sightings for <?- $flower?></h2>
+<h2>Sightings for <?= $flower?></h2>
 <table class= "table table-striped">
 	<tr>
 		<th>Name</th>
