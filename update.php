@@ -39,7 +39,7 @@ require 'database.php';
 ?>
 	<?php
 		//Hide if flower is already selected 
-		if(is_null($message) || !isset($flower)):
+		if(!isset($flower)):
 		?>
 	<form class="form-inline" method = "get">
 <div class="form-group">
