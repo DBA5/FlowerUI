@@ -42,7 +42,7 @@ require 'database.php';
 		if(is_null($message) || !isset($flower)):
 		?>
 	<form class="form-inline" method = "get">
-<div class="form_group">
+<div class="form-group">
 <label for="flower">Flower</label>
 <select class="form-control" id="flower" name = "flower">
 	<option value="-1">Select One</option>
