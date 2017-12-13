@@ -17,7 +17,7 @@ public function getFlowers(){
 		$cur_row['comname']=$row['COMNAME'];
 		$cur_row['genus']=$row['GENUS'];
 		$cur_row['species']= $row['SPECIES'];
-		$result_array[] = $cur_row;
+		$result_array[$row['COMNAME']] = $cur_row;
 
 }
 	return $result_array;
@@ -42,7 +42,12 @@ public function getSightings($flower){
     }
     return $result_array;
 }
-public function updateFlowers($flower, $person, $location, $sighted){
+public function updateFlower($flower, $genus, $species, $comname){
+	$this->getConnection();
+	$sql = "UPDATE FLOWERS SET COMNAME = :comname, GENUS = :genus, SPECIES = :species WHERE COMNAME = :flower";
+	$stmt = $this->conn->prepare($sql);
+	if($stmt ===False) return False;
+	$stmt->execute(array(':comname'->$comname, ':genus'->$genus, ':species'->$species, ':flower'->$flower));
 	
 }
 public function addSighting($flower, $person, $location, $sighted){

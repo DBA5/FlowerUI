@@ -12,6 +12,7 @@ require 'database.php';
          $sightings = $db->getSightings($flower);
      }
  }
+ $db->close();
 ?>
 <div class="container">
 <?php
@@ -37,6 +38,7 @@ require 'database.php';
 <button type ="submit" class="btn btn-default">Go</button>
 </form>
 <hr>
+<?php if(isset($sightings)): ?>
 <h2>Sightings for <?- $flower?></h2>
 <table class= "table table-striped">
 	<tr>
@@ -58,6 +60,7 @@ require 'database.php';
 		endforeach;
 	?>
 </table>
+<?php endif; ?>
 </div><!-- /.container -->
 
 <?php require 'footer.php' ?>
